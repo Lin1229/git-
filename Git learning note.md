@@ -10,14 +10,16 @@
 >  ```
 > 3. 使用 `mkdir learngit`创建一个名为learngit的文件夹`cd learngit`进入文件夹
 > 4. 在文件夹内通过`git init`把这个目录变为git管理的仓库（repo），版本库建立完成
-> #### 本章代码总结
-> > 1. mkdir <filename>     创建文件夹
-> > 2. cd <filename>         切换到目标文件夹
-> > 3. pdw                              显示当前目录
-> > 4. cat <filename>         查看目标文件
-> > 5.  ls                                  显示当前文件夹内容
 
-## 2. 版本回退
+## 2.git 基础操作
+
+> 1. mkdir <filename>     创建文件夹
+> 2. cd <filename>         切换到目标文件夹
+>  3. pdw                              显示当前目录
+>  4. cat <filename>         查看目标文件
+>  5.  ls                                  显示当前文件夹内容
+
+## 3. 版本回退
 
 > 1. 将文件加入版本库
 > ```
@@ -36,16 +38,18 @@
 > 3.撤销修改
 >
 > ```
-> 1.git checkout -- readme.txt 撤销工作区中readme.txt文件的修改（若未递交到暂存区，则退回到与版本库中相同，若提交到暂存区后又进行修改，则退回到添加到暂存区后代状态）
+> 1.git checkout -- readme.txt 撤销工作区中readme.txt文件的修改
+> （若未递交到暂存区，则退回到与版本库中相同，若提交到暂存区后又进行修改，则退回到添加到暂存区后代状态）
 > 2.git reset HEAD readme.txt 撤销暂存区的修改，回退到工作区
 > ```
 > 4.删除文件
 > ```
 > 1.rm test.txt 删除文件
-> 2.git rm test.txt 提交删除文件请求到暂存区，再使用git commit -m"" 命令删除版本库中文件，误删除可以使用git checkout -- test.txt 恢复
+> 2.git rm test.txt 提交删除文件请求到暂存区，再使用git commit -m"" 命令删除版本库中文件
+> 3.误删除可以使用git checkout -- test.txt 恢复
 > ```
 
-## 3. 远程仓库  
+## 4. 远程仓库  
 
 >1.本地仓库与远程仓库关联
 >```
@@ -59,7 +63,7 @@
 >1.git clone git@github.com:Lin1229/gitskills.git从远程仓库中克隆
 >```
 
-## 4.分支管理
+## 5.分支管理
 
 > 1.创建合并分支
 > ```
