@@ -152,9 +152,13 @@
 >
 >\# 此为注释 – 将被 Git 忽略
 >
->*.cs    # 忽略所有 .cs 结尾的文件
-> !ABC.cs  # 但 ABC.cs 除外
-> /BLL    # 仅仅忽略项目根目录下的 BLL 文件，不包括 subdir/BLL
-> build/   # 忽略 build/ 目录下的所有文件
+>*.cs    # 忽略所有 .cs 结尾的文件   
+>
+> !ABC.cs  # 但 ABC.cs 除外   
+> 
+> /BLL    # 仅仅忽略项目根目录下的 BLL 文件，不包括 subdir/BLL   
+> 
+> build/   # 忽略 build/ 目录下的所有文件   
+> 
 > doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 
