@@ -82,7 +82,7 @@
 > ```
 > <base href="//www.runoob.com/images/" target="_blank">  指定所有链接的默认地址以及target属性
 > ```
-> 3. <link> 定义文档与外部资源之间的关系
+> 3. \<link> 定义文档与外部资源之间的关系
 > 4. \<style> 定义html文档样式文件引用地址
 > 5. \<meta>标签描述基本元数据，不在页面上显示
 > ```
@@ -124,14 +124,14 @@
 
 ## 10.图像
 
-> 1. 使用<img> 定义一个图像，无闭合标签
+> 1. 使用\<img> 定义一个图像，无闭合标签
 > 2. \<img src="url" alt="some_text">
 > * url为图片地址
 > * alt为图片文本，当图片无法显示时将显示文本
 > 3. \<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228"> 指定图像高度和宽度
 
 ## 11.表格
-> 1.由<table> 标签定义表格，<tr>定义行 <td>定义表格内数据
+> 1.由\<table> 标签定义表格，<tr>定义行 <td>定义表格内数据
 > 如：
 >
 > ```
@@ -147,5 +147,5 @@
 > </table>
 > ```
 
-![表格 样例](https://github.com/Lin1229/git-/tree/dev/others/img-html1)
+
 

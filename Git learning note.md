@@ -31,9 +31,10 @@
 > 1. 将文件加入版本库
 > ```
 > 1. git add <filename1><filename2>  将目标文件添加到缓存区(若文件名带有空格，则加上引号git add "learn git.txt")
-> 2. git status               查看缓存区状态
-> 3. git diff                  查看修改内容
-> 4. git commit -m"message"  将缓存区中的文件提交到版本库中，并提交说明
+> 2. git add -A 添加所有文件
+> 3. git status               查看缓存区状态
+> 4. git diff                  查看修改内容
+> 5. git commit -m"message"  将缓存区中的文件提交到版本库中，并提交说明
 > ```
 > 2. 版本回退
 > ```
