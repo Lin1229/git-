@@ -66,3 +66,86 @@
 > ```
 
 ## 7. 链接
+
+> 1.  \<a href="url"> 链接文本 \</a>  href属性描述链接目标
+> 2. \<a href="url" target="_blank" > 链接文本 \</a> 在新窗口打开链接
+
+## 8.头部
+> 1. \<head> 元素包含了所有头部标签元素
+> 2. \<title> 定义html文档标题
+> ```
+> 1.定义了浏览器工具栏的标题
+> 2.定义了添加到收藏夹时的标题
+> ```
+>
+> 3. \<base> 指定所有链接的地址
+> ```
+> <base href="//www.runoob.com/images/" target="_blank">  指定所有链接的默认地址以及target属性
+> ```
+> 3. <link> 定义文档与外部资源之间的关系
+> 4. \<style> 定义html文档样式文件引用地址
+> 5. \<meta>标签描述基本元数据，不在页面上显示
+> ```
+> <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">  定义关键词
+> <meta name="description" content="免费 Web & 编程 教程">              定义描述内容
+> <meta name="author" content="Runoob">                               定义网页作者
+> <meta http-equiv="refresh" content="30">                            每30s刷新网页
+> ```
+
+## 9.CSS
+
+> 1.CSS(Cascading Style Sheets) 用于渲染html元素标签的样式
+> 2.CSS可以用以下方式添加到html中
+>
+> ```
+> 1.内联样式：在html元素中使用style属性
+> <p style="color:blue;margin-left:20px;">这是一个段落。</p>  改变段落的颜色和左边距
+> 
+> 2.内部样式表：在html文档头部使用style
+> <head>
+> <style type="text/css">
+> body {background-color:yellow;}
+> p {color:blue;}
+> </style>
+> </head>
+> 
+> 3.外部引用：使用外部css文件
+> <head>
+> <link rel="stylesheet" type="text/css" href="mystyle.css">
+> </head>
+> ```
+> ### 实例
+> 1. 背景颜色
+> * style="background-color：yellow；" 定义元素的背景颜色
+> 2. 字体颜色大小
+> * style="font-family：arial；color：red；font-size：20px；" font-family字体，color字体颜色，font-size字体大小
+> 3. 对齐方式
+> * style="text-align:center;"  居中对齐
+
+## 10.图像
+
+> 1. 使用<img> 定义一个图像，无闭合标签
+> 2. \<img src="url" alt="some_text">
+> * url为图片地址
+> * alt为图片文本，当图片无法显示时将显示文本
+> 3. \<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228"> 指定图像高度和宽度
+
+## 11.表格
+> 1.由<table> 标签定义表格，<tr>定义行 <td>定义表格内数据
+> 如：
+>
+> ```
+> <table border="1">
+>     <tr>
+>         <td>row 1, cell 1</td>
+>         <td>row 1, cell 2</td>
+>     </tr>
+>     <tr>
+>         <td>row 2, cell 1</td>
+>         <td>row 2, cell 2</td>
+>     </tr>
+> </table>
+> ```
+
+![表格 样例](https://github.com/Lin1229/git-/tree/dev/others/img-html1)
+
