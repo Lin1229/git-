@@ -85,6 +85,8 @@
 > 4.git merge dev 合并指定分支到当前分支
 > 5.git branch -d dev 删除分支
 > 6.git branch -D dev 强制删除
+> 7.git branch -a 查看所有分支包括远程分支
+> 8.git push origin --delete dev 删除远程分支
 > ```
 > 2. 分支冲突
 >
