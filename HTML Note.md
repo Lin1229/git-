@@ -161,21 +161,142 @@
 > 3. \<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228"> 指定图像高度和宽度
 
 ## 11.表格
-> 1.由\<table> 标签定义表格，\<tr>定义行 \<td>定义表格内数据
+> 1.由**\<table> **标签定义表格，**\<tr>**定义行 **\<td>**定义表格内数据 **\<th>**定义表头 **\<caption>**定义标题
 > 如：
 >
 > ```
-> <table border="1">
->     <tr>
->         <td>row 1, cell 1</td>
->         <td>row 1, cell 2</td>
->     </tr>
->     <tr>
->         <td>row 2, cell 1</td>
->         <td>row 2, cell 2</td>
->     </tr>
+> <table border="1">        border="1"定义边框，数字为边框厚度，0为无边框
+> <caption> 标题 </caption>        定义表格标题
+> <tr>                            表头
+> <th>Header 1</th>
+> <th>Header 2</th>
+> </tr>
+> <tr>                            第一行
+> <td>row 1, cell 1</td>
+> <td>row 1, cell 2</td>
+> </tr>
+> <tr>                            第二行
+> <td>row 2, cell 1</td>
+> <td>row 2, cell 2</td>
+> </tr>
 > </table>
 > ```
+> <table border="1">      
+> <caption> 标题 </caption>        
+> <tr>                            
+> <th>Header 1</th>
+> <th>Header 2</th>
+> </tr>
+> <tr>                          
+> <td>row 1, cell 1</td>
+> <td>row 1, cell 2</td>
+> </tr>
+> <tr>                            
+> <td>row 2, cell 1</td>
+> <td>row 2, cell 2</td>
+> </tr>
+> </table>
+> 2. 通过 colspan="" 和rowspan="" 元素定义跨行跨列单元格可以使用在\<th>或\<td>中
+>
+> ```
+> <table border="1">
+> <tr>
+> <th>Name</th>                          
+> <th colspan="2">Telephone</th>
+> </tr>
+> <tr>
+> <td rowspan="2">Bill Gates</td>
+> <td>555 77 854</td>
+> <td>555 77 855</td>
+> </tr>
+> <tr>
+> <td>555 77 854</td>
+> <td>555 77 855</td>
+> </tr>   
+> </table>
+> ```
+> <table border="1">
+> <tr>
+> <th>Name</th>
+> <th colspan="2">Telephone</th>
+> </tr>
+> <tr>
+> <td rowspan="2">Bill Gates</td>
+> <td>555 77 854</td>
+> <td>555 77 855</td>
+> </tr>
+> <tr>
+> <td>555 77 854</td>
+> <td>555 77 855</td>
+> </tr>   
+> </table>
+> 3. 表格内可以使用其他标签，如表格，段落，列表等
+> 4. cellspacing="10" 设置单元格间距  cellpadding="10" 设置单元格边距
 
+## 12. 列表
 
+> 1.使用 \<ul> 创建无需列表 \<ol> 创建有序列表 \<li> 定义列表项
+>
+> ```
+> <ol>
+> <li>Coffee</li>
+> <li>Milk</li>
+> </ol>
+> <ul>
+> <li>Coffee</li>
+> <li>Milk</li>
+> </ul>
+> ```
+> <ol>                     
+> <li>Coffee</li>
+> <li>Milk</li>
+> </ol>
+> <ul>
+> <li>Coffee</li>
+> <li>Milk</li>
+> </ul>
+> 2. 不同类型的有序列表和无需列表（使用CSS）
+>    * \<ol type="A"> 大写字母列表
+>    * \<ol type="a"> 小写字母列表
+>    * \<ol type="I"> 罗马数字列表
+>    * \<ol type="i"> 小写罗马数字列表
+>    * \<ul style="list-style-type:disc"> 圆点列表
+>    * \<ul style="list-style-type:circle"> 圆圈列表
+>    * \<ul style="list-style-type:square"> 正方形列表
+> 3. 使用\<dl>标签创建自定义列表，\<dt>为列表项，\<dd>为列表项的定义
+> ```
+> <dl>
+> <dt>Coffee</dt>
+> <dd>- black hot drink</dd>
+> <dt>Milk</dt>
+> <dd>- white cold drink</dd>
+> </dl>
+> ```
+> <dl>
+> <dt>Coffee</dt>
+> <dd>- black hot drink</dd>
+> <dt>Milk</dt>
+> <dd>- white cold drink</dd>
+> </dl>
 
+## 13.区块
+
+> 1. 大多数html元素被定义为块级元素或内联元素
+> * 大部分块级元素显示时会以新行开始，如\<h1>, \<p>,\<ul>, \<table>
+> * 内联元素则不会以新行开始，如\<b>, \<td>, \<a>,\<img>
+> 2. \<div>是块级元素，可组合其他html元素，无特定含义，与CSS一起使用可以设置大块内容的样式
+> ```
+> <div style="color:#0000FF">  
+> <h3>这是一个在 div 元素中的标题。</h3> 
+> <p>这是一个在 div 元素中的文本。</p> 
+> </div>
+> ```
+> <div style="color:#0000FF">  
+> <h3>这是一个在 div 元素中的标题。</h3>  
+> <p>这是一个在 div 元素中的文本。</p> 
+> </div>
+> 3. \<span>元素是内联元素，可作为文本容器，同样无特殊意义，与CSS一起使用可以设置部分文本样式
+> ```
+> <p>我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。</p>
+> ```
+> <p>我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。</p>
