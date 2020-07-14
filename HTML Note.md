@@ -161,7 +161,7 @@
 > 3. \<img src="pulpit.jpg" alt="Pulpit rock" width="304" height="228"> 指定图像高度和宽度
 
 ## 11.表格
-> 1.由**<table> **标签定义表格，**<tr>**定义行 **<td>**定义表格内数据 **<th>**定义表头 **<caption>**定义标题
+> 1.由**\<table>**标签定义表格**\<tr>**定义行 **\<td>**定义表格内数据 **\<th>**定义表头 **\<caption>**定义标题
 > 如：
 >
 > ```
@@ -256,13 +256,16 @@
 > <li>Milk</li>
 > </ul>
 > 2. 不同类型的有序列表和无需列表（使用CSS）
->    *    \<ol type="A"> 大写字母列表
->    *    \<ol type="a"> 小写字母列表
->    *    \<ol type="I"> 罗马数字列表
->    *    \<ol type="i"> 小写罗马数字列表
->    *    \<ul style="list-style-type:disc"> 圆点列表
->    *    \<ul style="list-style-type:circle"> 圆圈列表
->    *    \<ul style="list-style-type:square"> 正方形列表
+> 
+> ```
+> <ol type="A"> 大写字母列表
+> <ol type="a"> 小写字母列表
+> <ol type="I"> 罗马数字列表
+> <ol type="i"> 小写罗马数字列表
+> <ul style="list-style-type:disc"> 圆点列表
+> <ul style="list-style-type:circle"> 圆圈列表
+> <ul style="list-style-type:square"> 正方形列表
+> ```
 > 3. 使用\<dl>标签创建自定义列表，\<dt>为列表项，\<dd>为列表项的定义
 > ```
 > <dl>
@@ -285,6 +288,7 @@
 > * 大部分块级元素显示时会以新行开始，如\<h1>, \<p>,\<ul>, \<table>
 > * 内联元素则不会以新行开始，如\<b>, \<td>, \<a>,\<img>
 > 2. \<div>是块级元素，可组合其他html元素，无特定含义，与CSS一起使用可以设置大块内容的样式
+>
 > ```
 > <div style="color:#0000FF">  
 > <h3>这是一个在 div 元素中的标题。</h3> 
@@ -296,6 +300,7 @@
 > <p>这是一个在 div 元素中的文本。</p> 
 > </div>
 > 3. \<span>元素是内联元素，可作为文本容器，同样无特殊意义，与CSS一起使用可以设置部分文本样式
+> 
 > ```
 > <p>我的母亲有 <span style="color:blue">蓝色</span> 的眼睛。</p>
 > ```
