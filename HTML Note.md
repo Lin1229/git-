@@ -311,64 +311,99 @@
 ## 14.布局
 
 > 1. 使用\<div>元素来创造多个列，使用CSS来对元素定位
-```
-<!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
-</head>
-<body>
- 
-<div id="container" style="width:500px">
- 
-<div id="header" style="background-color:#FFA500;">
-<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
- 
-<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+>```
+> <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
 <b>菜单</b><br>
 HTML<br>
 CSS<br>
 JavaScript</div>
- 
-<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
-内容在这里</div>
- 
-<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-版权 © runoob.com</div>
- 
-</div>
- 
-</body>
-</html>
-```
+>```
 
-<!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
-</head>
-<body>
+## 15. 表单
 
-<div id="container" style="width:500px">
+> 1. 表单元素\<form>允许用户输入内容，通常使用的标签为输入标签\<input>，输入类型由以下属性定义
+>
+> * 文本域 \<input type="text">，输入字母数字等
+>
+> ```
+> <form>
+> First name: <input type="text" name="firstname"><br>
+> Last name: <input type="text" name="lastname">
+> </form>
+> ```
+> * 密码字段 \<input type="password">，字符将不会明文显示
+>
+> * 单选按钮 \<input type="radio">   单选
+>
+> * 复选按钮 \<input type="checkbox"> 多选
+>
+> * 提交按钮 \<input type="submit"> 将表单内容传送到另一个文件，action定义目标文件名
+>
+> ```
+> <form name="input" action="html_form_action.php" method="get">
+> Username: <input type="text" name="user">
+> <input type="submit" value="Submit">
+> </form>
+> ```
+> 2. \<select>下拉列表  \<option>定义可用选项，\<optgroup>将相关选项组合在一起
+>
+> ```
+> <form action="">
+> <select name="cars">
+> <optgroup label="Swedish Cars">
+> <option value="volvo">Volvo</option>
+> <option value="saab">Saab</option>
+> </optgroup>
+> <option value="fiat" selected>Fiat</option>                    selected表示预选值
+> <option value="audi">Audi</option>
+> </select>
+> </form>
+> ```
+> 3. \<testarea> 定义一个文本域，用于多行输入
+>
+> ```
+> <textarea rows="10" cols="30">
+> 我是一个文本框。
+> </textarea>
+> ```
+> 4. \<label> 定义input元素的标签，点击文本时会自动跳转到相关的表单控件上
+>
+> ```
+> <label for="male">Male</label>         for属性规定label与哪个表单绑定，指向表单id
+> <input type="radio" name="sex" id="male" value="male">
+> ```
+> 5. \<fieldset> 对表单进行分组，\<legend>设置分组标题，
+> ```
+> <form>
+>   <fieldset>
+>     <legend>Personalia:</legend>
+>     Name: <input type="text"><br>
+>     Email: <input type="text"><br>
+>     Date of birth: <input type="text">
+>   </fieldset>
+> </form>
+> ```
+> 6. \<botton> 定义一个按钮，与input按钮不同的是，botton可以放置内容，如文本或图像
+> ```
+> <button type="button" onclick="alert('你好，世界!')">点我!</button>
+> ```
 
-<div id="header" style="background-color:#FFA500;">
-<h1 style="margin-bottom:0;">主要的网页标题</h1></div>
+## 16. 框架
 
-<div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
-<b>菜单</b><br>
-HTML<br>
-CSS<br>
-JavaScript</div>
-
-<div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
-内容在这里</div>
-
-<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
-版权 © runoob.com</div>
-
-</div>
-
-</body>
-</html>
+> 1. 通过使用\<iframe>可以在同一个窗口显示多个页面
+>
+>    ```
+>    <iframe src="URL"></iframe> src指向网页地址
+>    <iframe src="demo_iframe.htm" width="200" height="200"></iframe>   设置长宽
+>    <iframe src="demo_iframe.htm" frameborder="0"></iframe>           设置边框
+>    ```
+>
+> 2. 显示目标页面
+>
+>    ```
+>    <iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+>    <p><a href="http://www.runoob.com" target="iframe_a">RUNOOB.COM</a></p>
+>    target指向iframe_a，点击时会在iframe框架中显示目标网页
+>    ```
+>
+>    
