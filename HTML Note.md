@@ -311,13 +311,14 @@
 ## 14.布局
 
 > 1. 使用\<div>元素来创造多个列，使用CSS来对元素定位
->```
+> ```
 > <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
-<b>菜单</b><br>
-HTML<br>
-CSS<br>
-JavaScript</div>
->```
+> <b>菜单</b><br>
+> HTML<br>
+> CSS<br>
+> JavaScript
+> </div>
+> ```
 
 ## 15. 表单
 
