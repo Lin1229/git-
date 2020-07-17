@@ -79,9 +79,9 @@
 >
 >    * 渐变
 >    
->      * 有两种渐变方式：线条渐变和圆渐变
+>      有两种渐变方式：线条渐变和圆渐变
 >      
->      * 使用渐变时必须使用两种以上的停止色，通过```addColorStop()```方法设置停止色，参数用坐标描述(从0至1)
+>      使用渐变时必须使用两种以上的停止色，通过```addColorStop()```方法设置停止色，参数用坐标描述(从0至1)
 >      
 >   ```
 >        var c=document.getElementById("myCanvas");
@@ -93,7 +93,7 @@
 >        ctx.fillRect(10,10,150,80);                  填充渐变
 >   ```
 >
->  ```
+>     ```
 >        var c=document.getElementById("myCanvas");
 >        var ctx=c.getContext("2d");
 >        var grd=ctx.createRadialGradient(75,50,5,90,60,100);  创建圆渐变(x,y,r,x1,y1,r1)
@@ -101,16 +101,16 @@
 >        grd.addColorStop(1,"white");
 >        ctx.fillStyle=grd;
 >        ctx.fillRect(10,10,150,80);
->  ```
+>     ```
 > 
 >    * 图像
 > 
->  ```
+>     ```
 >      var c=document.getElementById("myCanvas");
 >      var ctx=c.getContext("2d");
 >      var img=document.getElementById("scream");
 >      ctx.drawImage(img,10,10); 创建图像
->  ```
+>     ```
 
 ## 3. SVG
 
