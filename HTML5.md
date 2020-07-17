@@ -72,15 +72,17 @@
 >      ```
 >      var c=document.getElementById("myCanvas");
 >      var ctx=c.getContext("2d");
->    ctx.font="30px Arial";         定义字体
+>      ctx.font="30px Arial";         定义字体
 >      ctx.fillText("Hello World",10,50);    绘制实心文本
->    ctx.strokeText("Hello World",10,50);  绘制空心文本
+>      ctx.strokeText("Hello World",10,50);  绘制空心文本
 >      ```
 >
->    * 渐变,有两种渐变方式：线条渐变和圆渐变,使用渐变时必须使用两种以上的停止色，通过```addColorStop()```方法设置停止色，参数用坐标描述(从0至1)
+>    * 渐变,有两种渐变方式：线条渐变和圆渐变,使用渐变时必须使用两种以上的停止色
+>
+>    * 通过```addColorStop()```方法设置停止色，参数用坐标描述(从0至1)
 >
 >    * 线条渐变
->
+>    
 >      ```
 >      var c=document.getElementById("myCanvas");
 >          var ctx=c.getContext("2d");
@@ -88,11 +90,11 @@
 >          grd.addColorStop(0,"red");                   设置停止色
 >          grd.addColorStop(1,"white");                 设置停止色
 >          ctx.fillStyle=grd;
->          ctx.fillRect(10,10,150,80);                填充渐变
+>       ctx.fillRect(10,10,150,80);                填充渐变
 >      ```
 >
 >    * 圆渐变
->
+>    
 >      ```
 >          var c=document.getElementById("myCanvas");
 >          var ctx=c.getContext("2d");
@@ -100,11 +102,11 @@
 >          grd.addColorStop(0,"red");
 >          grd.addColorStop(1,"white");
 >          ctx.fillStyle=grd;
->      	ctx.fillRect(10,10,150,80);
+>   	ctx.fillRect(10,10,150,80);
 >      ```
 >
 >    * 图像
->
+>    
 >      ```
 >        var c=document.getElementById("myCanvas");
 >        var ctx=c.getContext("2d");
