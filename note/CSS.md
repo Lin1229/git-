@@ -191,7 +191,16 @@
 
 ## 5. Float浮动
 
-> 1. 
+> 1. 元素会向水平方向移动，周围的元素将围绕排布。几个浮动元素放在一起会彼此相邻。
+>
+> 2. 使用clear:both禁止元素重新排列
+>
+>    ```
+>    img 
+>    {
+>    	float:right;
+>    }
+>    ```
 
 ## . 施工中
 
@@ -199,54 +208,103 @@
 
 >1. **居中对齐**
 >
->  * 块级元素直接使用margin: auto；(外边距)
+>* 块级元素直接使用margin: auto；(外边距)
+>
+>```
+>.center 
+>{
+>   margin: auto;
+>   width: 50%;       若没有设置宽度或宽度为100%则居中不起作用
+>   border: 3px solid green;
+>   padding: 10px;
+>}
+>```
+>
+>* 文本居中，使用text-align：center
+>
+>```
+>.center 
+>{
+>   text-align: center;
+>   border: 3px solid green;
+>}
+>```
+>
+>* 非块级元素，将其设置为块级元素
+>
+>```
+>img {
+>   display: block; /*设置为块级元素*/
+>   margin: auto;
+>   width: 40%;
+>}
+>```
+>2. **左右对齐**
+>
+>* 使用定位方式
 >
 >  ```
->  .center 
->  {
->      margin: auto;
->      width: 50%;       若没有设置宽度或宽度为100%则居中不起作用
->      border: 3px solid green;
+>  .right {
+>      position: absolute;
+>      right: 0px;  /*右边界为0，右对齐，left: 0px;左对齐*/
+>      width: 300px;
+>      border: 3px solid #73AD21;
 >      padding: 10px;
 >  }
 >  ```
 >
->  * 文本居中，使用text-align：center
+>* 使用float方式
 >
 >  ```
->  .center 
->  {
->      text-align: center;
+>.right {
+>      float: right;
+>      width: 300px;
+>      border: 3px solid #73AD21;
+>      padding: 10px;
+>  }
+>  ```
+>3. **垂直居中对齐**
+>
+>* padding
+>
+>  ```
+>  .center {
+>      padding: 70px 0;
 >      border: 3px solid green;
 >  }
 >  ```
 >
->  * 非块级元素，将其设置为块级元素
+>* line-height，使line-height与height相等
 >
 >  ```
->  img {
->      display: block; /*设置为块级元素*/
->      margin: auto;
->      width: 40%;
+>  .center {
+>      line-height: 200px;
+>      height: 200px;
+>      border: 3px solid green;
+>      text-align: center;
 >  }
 >  ```
->2. **左右对齐**
+>
+>* transform
+>
+>  ```
+>  .center { 
+>      height: 200px;
+>      position: relative;
+>      border: 3px solid green; 
+>  }
 >   
->   * 使用定位方式
->   
->     ```
->     .right {
->         position: absolute;
->         right: 0px;  /*右边界为0，右对齐，left: 0px;左对齐*/
->         width: 300px;
->         border: 3px solid #73AD21;
->         padding: 10px;
->     }
->     ```
->   
->   * 使用float方式
->   
->     
->   
->     
+>  .center p {
+>      margin: 0;
+>      position: absolute;
+>      top: 50%;
+>      left: 50%;
+>      transform: translate(-50%, -50%);
+>  }
+>  ```
+>
+>  
+>
+>  
+>
 
