@@ -140,6 +140,7 @@
 > | :----------- | :------------------------- |
 > | responseText | 获得字符串形式的响应数据。 |
 > | responseXML  | 获得 XML 形式的响应数据。  |
+>
 >text
 >```
 >document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
