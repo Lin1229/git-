@@ -132,3 +132,27 @@
 >   ```
 >
 
+## 3. XHR响应
+
+>1. 获取服务器响应，使用responseText或responseXML
+>
+> | 属性         | 描述                       |
+> | :----------- | :------------------------- |
+> | responseText | 获得字符串形式的响应数据。 |
+> | responseXML  | 获得 XML 形式的响应数据。  |
+>text
+>```
+>document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+>```
+>xml
+>```
+>xmlDoc=xmlhttp.responseXML;
+>txt="";
+>x=xmlDoc.getElementsByTagName("ARTIST");
+>for (i=0;i<x.length;i++)
+>{
+>    txt=txt + x[i].childNodes[0].nodeValue + "<br>";
+>}
+>document.getElementById("myDiv").innerHTML=txt;
+>```
+>
