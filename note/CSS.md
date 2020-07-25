@@ -1,4 +1,4 @@
-# CSS
+# CSS(Cascading Style Sheets)
 
 ## 1. 语法
 
