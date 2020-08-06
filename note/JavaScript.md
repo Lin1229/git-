@@ -161,27 +161,27 @@
 
 >1. 对象的方法定义了一个函数，并作为对象的属性存储。
 >
->   对象方法通过添加 () 调用 (作为一个函数)。
+>   * 对象方法通过添加 () 调用 (作为一个函数)。
 >
->   该实例访问了 person 对象的 fullName() 方法:
+>   * 该实例访问了 person 对象的 fullName() 方法:
 >
->   ```
->   name = person.fullName();
->   ```
+>     ```
+>      name = person.fullName();
+>     ```
 >
->   **若不加括号将返回字符串**
+>  **若不加括号将返回字符串**
 >
 >2. 创建对象方法，使用```methodName : function() {}```
 >
 >   ```
->   var person = {
->       firstName: "John",
->       lastName : "Doe",
->       id : 5566,
->       fullName : function() 
->   	{
->          return this.firstName + " " + this.lastName;
->       }
+>    var person = {
+>         firstName: "John",
+>         lastName : "Doe",
+>         id : 5566,
+>         fullName : function() 
+>     	{
+>            return this.firstName + " " + this.lastName;
+>         }
 >   ```
 >
 >3. 访问对象方法，```objectName.methodName()```
@@ -349,3 +349,136 @@
 > 5. 条件运算符
 >
 >    ```variablename=(condition)?value1:value2 ```
+
+## 10. break
+
+>js语句可以进行标记，通过在语句前加冒号进行标记，break可以跳过代码块
+>
+>```
+>cars=["BMW","Volvo","Saab","Ford"];
+>list: 
+>{
+>    document.write(cars[0] + "<br>"); 
+>    document.write(cars[1] + "<br>"); 
+>    document.write(cars[2] + "<br>"); 
+>    break list;
+>    document.write(cars[3] + "<br>"); 
+>    document.write(cars[4] + "<br>"); 
+>    document.write(cars[5] + "<br>"); 
+>}
+>```
+
+## 11. typeof
+
+>1. 使用typeof运算符检测变量类型```typeof "John"         返回 string```
+>
+>2. **null**是一个特殊数据类型，表示空，是一个对象
+>
+>   ```
+>   给对象设置为null来清空
+>   var person = null          person值为null 类型为obiect
+>   也可以给对象设置为undefined清空
+>   var person = undefined     person值为undefined 类型也为undefined
+>   ```
+>
+>3. **undefined**是一个没有值的变量
+>
+>   ```
+>   var person //person 值和类型都为undefined
+>   ```
+>4. undefined和null值相同，类型不相同
+>
+
+## 12. 类型转换
+
+> 1. 数字转化为字符串
+>
+>    ```
+>    全局方法String()
+>    String(x)
+>    String(3.14)
+>    Number方法toString()
+>    x.toString()
+>    (3.14).toString
+>    ```
+>
+> 2. 布尔转化为字符串
+>
+>    ```
+>    全局方法String()
+>    String(true)
+>    Boolean方法
+>    true.toString()
+>    ```
+>
+> 3. 日期转化为字符串
+>
+>    ```
+>    Date对象
+>    Date()返回字符串
+>    全局方法
+>    String(new Date())
+>    Date方法
+>    obj = new Date()
+>    obj.toString()
+>    ```
+>
+> 4. 字符串转化数字
+>
+>    ```
+>    全局方法Number()，空字符串会转化成0，其他字符串转化为NaN
+>    Number("3.14")    // 返回 3.14
+>    Number(" ")       // 返回 0
+>    Number("")        // 返回 0
+>    Number("99 88")   // 返回 NaN
+>    ```
+>
+> 5. 使用一元运算符"+"转化数字
+>
+>    ```
+>    var y = "5";      // y 是一个字符串
+>    var x = + y;      // x 是一个数字
+>    -----------------------------------
+>    var y = "John";   // y 是一个字符串
+>    var x = + y;      // x 是一个数字 (NaN)
+>    ```
+>    
+> 6. 将布尔转化为数字
+>
+>    ```
+>    使用全局方法
+>    Number()
+>    ```
+>
+> 7. 日期转化为数字
+>
+>    ```
+>    全局方法
+>    var d = new Date()
+>    Number(d)
+>    日期方法
+>    d.getTime()
+>    ```
+>
+> 8. 自动转换类型
+>
+>    ```
+>    5 + null    // 返回 5         null 转换为 0
+>    "5" + null  // 返回"5null"   null 转换为 "null"
+>    "5" + 1     // 返回 "51"      1 转换为 "1" 
+>    "5" - 1     // 返回 4         "5" 转换为 5
+>    ```
+>
+> 9. 自动转化为字符串
+>
+>    ```
+>    输出一个对象或一个变量时 JavaScript 会自动调用变量的 toString() 方法：
+>    document.getElementById("demo").innerHTML = myVar;
+>    
+>    myVar = {name:"Fjohn"}  // toString 转换为 "[object Object]"
+>    myVar = [1,2,3,4]       // toString 转换为 "1,2,3,4"
+>    myVar = new Date()      // toString 转换为 "Fri Jul 18 2014 09:08:55 GMT+0200"
+>    ```
+>
+>    **"0"，"000"转化为bool值后为true，""转化为bool为false**
+
